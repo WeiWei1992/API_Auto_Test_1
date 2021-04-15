@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="695ee0c9-484b-4e6d-8287-f96b56fb0c16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Android_yuyin_autotool/public/operate_excel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Android_yuyin_autotool/public/send_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chip_yuliao/.idea/Chip_yuliao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chip_yuliao/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chip_yuliao/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chip_yuliao/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chip_yuliao/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HttpRun/pytestDemo2/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HttpRun/pytestDemo2/config/log.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HttpRun/pytestDemo2/test_calc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Monkey_test/.idea/Monkey_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Monkey_test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Monkey_test/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Monkey_test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Monkey_test/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Monkey_test/MonkeyTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lunwen/.idea/lunwen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lunwen/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lunwen/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lunwen/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lunwen/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lunwen/logic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yuliao_trans/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yuliao_trans/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yuliao_trans/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yuliao_trans/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yuliao_trans/.idea/yuliao_trans.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yuliao_trans/trans_yuliao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/headers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/base/base_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Android_yuyin_autotool/base/base_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/my_main/handle_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Android_yuyin_autotool/my_main/handle_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/my_main/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Android_yuyin_autotool/my_main/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/public/handle_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Android_yuyin_autotool/public/handle_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/yuliao_chip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/yuliao_chip/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Chip_yuliao/handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_yuyin_autotool/yuliao_trans/trans_yuliao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_17_10_59_11/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_17_11_00_41/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_17_11_02_12/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_17_11_03_42/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_17_11_05_13/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_17_11_06_43/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_13_52_36/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_13_54_11/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_13_55_41/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_13_57_11/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_13_58_43/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_00_14/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_03_51/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_05_21/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_15_03/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_16_32/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_21_07/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_22_37/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_24_06/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_25_36/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_31_22/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_32_52/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_35_12/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_36_42/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_39_36/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_14_41_06/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_15_27_23/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_15_28_53/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_15_53_37/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_15_55_07/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_15_57_06/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_15_58_36/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_00_06/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_01_36/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_03_07/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_04_37/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_44_50/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_46_20/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_16_58_33/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_17_00_19/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_17_03_21/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_17_04_51/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_17_11_07/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/original_log/uai_log_2020_04_20_17_12_36/uai_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_17_10_59_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_17_11_00_41.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_17_11_02_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_17_11_03_42.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_17_11_05_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_17_11_06_43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_13_52_36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_13_54_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_13_55_41.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_13_57_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_13_58_43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_00_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_03_51.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_05_21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_15_03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_16_32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_21_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_22_37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_24_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_25_36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_31_22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_32_52.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_35_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_36_42.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_39_36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_14_41_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_15_27_23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_15_28_53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_15_53_37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_15_55_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_15_57_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_15_58_36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_00_06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_01_36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_03_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_04_37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_44_50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_46_20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_16_58_33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_17_00_19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_17_03_21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_17_04_51.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_17_11_07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Logs/result_log/filter_uai_log_2020_04_20_17_12_36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/Logs/runlog.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_17_10_28_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_17_10_58_38.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_17_13_06_36.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_20_16_44_17.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_20_16_58_00.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_20_16_59_46.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_20_17_01_57.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_20_17_02_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/Result/result_2020_04_20_17_10_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/config/log.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/config/log.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/operate_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/operate_excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Voice_Tool/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../Voice_Tool/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../click_geidao/click_mygeidao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../click_geidao/click_mygeidao.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-41255180">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="4" />
+          <entry key="project.open.time.11" value="4" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="body" value="3" />
+          <entry key="conf" value="2" />
+          <entry key="headers" value="1" />
+          <entry key="ini" value="2" />
+          <entry key="log" value="4" />
+          <entry key="py" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Ini" value="2" />
+          <entry key="Log" value="4" />
+          <entry key="Logstash" value="2" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="body" value="2" />
+          <entry key="conf" value="3" />
+          <entry key="headers" value="19" />
+          <entry key="ini" value="340" />
+          <entry key="py" value="14598" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Ini" value="340" />
+          <entry key="Logstash" value="3" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="14598" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Api_Run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1618295586376" expanded="true" signature="548:1214" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/run_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="343" column="19" selection-start-line="343" selection-start-column="15" selection-end-line="343" selection-end-column="19" />
+              <folding>
+                <element signature="e#1#10#0" expanded="true" />
+                <marker date="1618467681154" expanded="true" signature="775:780" ph="..." />
+                <marker date="1618467681154" expanded="true" signature="4174:14491" ph="..." />
+                <marker date="1618467681154" expanded="false" signature="4490:4499" ph="..." />
+                <marker date="1618467681154" expanded="true" signature="4490:5465" ph="..." />
+                <marker date="1618467681154" expanded="true" signature="11501:11510" ph="..." />
+                <marker date="1618467681154" expanded="true" signature="12250:12259" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/public.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="176" column="21" selection-start-line="176" selection-start-column="21" selection-end-line="176" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1618468061678" expanded="true" signature="167:172" ph="..." />
+                <marker date="1618468061678" expanded="true" signature="167:1330" ph="..." />
+                <marker date="1618468061678" expanded="true" signature="4221:4226" ph="..." />
+                <marker date="1618468061678" expanded="true" signature="6195:6200" ph="..." />
+                <marker date="1618468061678" expanded="true" signature="6195:6384" ph="..." />
+                <marker date="1618468061678" expanded="true" signature="6382:6383" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/sign.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1618451678686" expanded="true" signature="332:337" ph="..." />
+                <marker date="1618451678686" expanded="true" signature="408:409" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/operate_ini.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1901">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <marker date="1618464452243" expanded="true" signature="495:500" ph="..." />
+                <marker date="1618464452243" expanded="true" signature="1650:1659" ph="..." />
+                <marker date="1618464452243" expanded="true" signature="2102:2111" ph="..." />
+                <marker date="1618464452243" expanded="true" signature="2232:2241" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/configparser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33180">
+              <caret line="1193" column="11" selection-start-line="1193" selection-start-column="8" selection-end-line="1193" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/body">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="25" selection-start-column="13" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/log.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>这个是登录接口</find>
+      <find>-check_value_list--</find>
+      <find>本次保存的参数是</find>
+      <find>-----</find>
+      <find>需要保存的参数列</find>
+      <find>需要保存的参数列表</find>
+      <find>计算签名</find>
+      <find>headers</find>
+      <find>请求的heders:</find>
+      <find>--------------------------------------</find>
+      <find>个是对body进行转码操作</find>
+      <find>-------</find>
+      <find>理body中还有配置文件情况</find>
+      <find>处理body中还有配置文件情况</find>
+      <find>realvalue</find>
+      <find>提取到的配置文件中body的值</find>
+      <find>++++++++++++++++++++</find>
+      <find>check_value_list</find>
+      <find>读取到的用例是</find>
+      <find>-------用例</find>
+      <find>64190047199000000</find>
+      <find>处理后body后的body::</find>
+      <find>保存配置文件失败，可能是因为接口返回数据没有该数据</find>
+      <find>配置文件中读取body配置文件出错，没有读到该值，该值直接赋值空</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config/log.conf" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/config/headers" />
+        <option value="$PROJECT_DIR$/config/body" />
+        <option value="$PROJECT_DIR$/common/handle_file.py" />
+        <option value="$PROJECT_DIR$/common/operate_excel.py" />
+        <option value="$PROJECT_DIR$/Api_Run.py" />
+        <option value="$PROJECT_DIR$/common/sign.py" />
+        <option value="$PROJECT_DIR$/common/operate_ini.py" />
+        <option value="$PROJECT_DIR$/config/config.ini" />
+        <option value="$PROJECT_DIR$/api/run_main.py" />
+        <option value="$PROJECT_DIR$/common/public.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="604" />
+    <option name="y" value="210" />
+    <option name="width" value="1218" />
+    <option name="height" value="1012" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="API_Auto_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API_Auto_Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API_Auto_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API_Auto_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API_Auto_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API_Auto_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="case" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API_Auto_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API_Auto_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python_Project\API_Auto_Test\config" />
+      <recent name="D:\Python_Project\API_Auto_Test\case" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Api_Run">
+    <configuration name="Api_Run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="API_Auto_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Api_Run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="operate_excel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="API_Auto_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/operate_excel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="operate_ini" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="API_Auto_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/operate_ini.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="public" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="API_Auto_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/public.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sign" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="API_Auto_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/sign.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Api_Run" />
+      <item itemvalue="Python.operate_ini" />
+      <item itemvalue="Python.public" />
+      <item itemvalue="Python.operate_excel" />
+      <item itemvalue="Python.sign" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Api_Run" />
+        <item itemvalue="Python.operate_ini" />
+        <item itemvalue="Python.sign" />
+        <item itemvalue="Python.operate_excel" />
+        <item itemvalue="Python.public" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="695ee0c9-484b-4e6d-8287-f96b56fb0c16" name="Default Changelist" comment="" />
+      <created>1616032389999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616032389999</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4408252" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.53094465" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33767644" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/common/runlog.log" />
+    <entry file="file://$PROJECT_DIR$/config/headers" />
+    <entry file="file://$PROJECT_DIR$/runlog.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-64047">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/_bootlocale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/http/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/handle_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/hashlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1642">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/openpyxl/worksheet/worksheet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15848">
+          <caret line="613" column="8" selection-start-line="613" selection-start-column="8" selection-end-line="613" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/operate_excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1618294089514" expanded="true" signature="2657:2662" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/sign.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1618451678686" expanded="true" signature="332:337" ph="..." />
+            <marker date="1618451678686" expanded="true" signature="408:409" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/configparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33180">
+          <caret line="1193" column="11" selection-start-line="1193" selection-start-column="8" selection-end-line="1193" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/public.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="176" column="21" selection-start-line="176" selection-start-column="21" selection-end-line="176" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1618468061678" expanded="true" signature="167:172" ph="..." />
+            <marker date="1618468061678" expanded="true" signature="167:1330" ph="..." />
+            <marker date="1618468061678" expanded="true" signature="4221:4226" ph="..." />
+            <marker date="1618468061678" expanded="true" signature="6195:6200" ph="..." />
+            <marker date="1618468061678" expanded="true" signature="6195:6384" ph="..." />
+            <marker date="1618468061678" expanded="true" signature="6382:6383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Api_Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1618295586376" expanded="true" signature="548:1214" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/operate_ini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1901">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1618464452243" expanded="true" signature="495:500" ph="..." />
+            <marker date="1618464452243" expanded="true" signature="1650:1659" ph="..." />
+            <marker date="1618464452243" expanded="true" signature="2102:2111" ph="..." />
+            <marker date="1618464452243" expanded="true" signature="2232:2241" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/body">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/log.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/run_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="343" column="19" selection-start-line="343" selection-start-column="15" selection-end-line="343" selection-end-column="19" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+            <marker date="1618467681154" expanded="true" signature="775:780" ph="..." />
+            <marker date="1618467681154" expanded="true" signature="4174:14491" ph="..." />
+            <marker date="1618467681154" expanded="false" signature="4490:4499" ph="..." />
+            <marker date="1618467681154" expanded="true" signature="4490:5465" ph="..." />
+            <marker date="1618467681154" expanded="true" signature="11501:11510" ph="..." />
+            <marker date="1618467681154" expanded="true" signature="12250:12259" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
