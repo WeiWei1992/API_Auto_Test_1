@@ -47,7 +47,14 @@ def run_main(case,result_file,row):
 
     Flag=True
 
-    for i in range(1,8):
+    for i in range(1,11):
+        tmp_step = 'step' + str(i)
+        print(steps[tmp_step])
+        time.sleep(0.1)
+
+        # if i==8:
+        #     logging.info("到了第8步骤了")
+        #     time.sleep(60)
         #循环次数和Excel表头、Excel接口数量一致
         print("------------------"+str(i)+"+++++++++++++++++++")
         tmp_step='step'+str(i)
@@ -114,6 +121,7 @@ def run_main(case,result_file,row):
             save_value_list.append(flag)
             save_value_list.append(failreason)
     save_result(result_file,row,save_value_list)
+    #openate_ini.delect()
 
 
 class Run_Url():
@@ -183,19 +191,47 @@ class Run_Url():
             logging.info(self.body)
 
             headers = self.get_header(time_stamp,self.verify)
-            res=requests.post(url=allurl,headers=headers,data=self.body)
-            logging.info("接口请求返回的数据是： "+str(res.json()))
-            self.handle_login(res.json())
-            flag,fail_reason = check_value(res, self.check)
-            if res.text:
-                real_txt=res.text
+            try:
+                res=requests.post(url=allurl,headers=headers,data=self.body)
+            except Exception as e:
+                # print('错误类型是', e.__class__.__name__)
+                # print('错误明细是', e)
+                logging.error("发送请求错误，错误类型是：")
+                logging.error(e.__class__.__name__)
+                logging.error("发送请求错误，错误明细：")
+                logging.error(e)
+                #real_txt, flag, fail_reason
+                real_txt='请求异常'
+                flag=False
+                fail_reason='请求异常'
+                return real_txt,flag,fail_reason
             else:
-                real_txt=''
-            if fail_reason:
-                fail_reason=fail_reason
-            else:
-                fail_reason=""
-            return real_txt,flag,fail_reason
+                # print("---------------------")
+                # print(res)
+                # print("---------------------")
+                # print(res.json())
+                # print(type(res.json()))
+
+                # logging.info("接口请求返回的数据是： ")
+                # logging.info(res.json())
+                # self.handle_login(res.json())
+                flag,fail_reason = check_value(res, self.check)
+                if flag:
+                    # 检验通过才能去提要需要的内容
+                    # 提取要提取的内容
+                    self.handle_login(res.json())
+                    logging.info("处理登录接口要提取的内容")
+                    save_value(res, self.get_value)
+
+                if res.text:
+                    real_txt=res.text
+                else:
+                    real_txt=''
+                if fail_reason:
+                    fail_reason=fail_reason
+                else:
+                    fail_reason=""
+                return real_txt,flag,fail_reason
 
         elif self.method==None or self.method=='':
             return '','',''
@@ -217,49 +253,64 @@ class Run_Url():
             logging.info(self.body)
             # logging.info("请求的heders: ")
             # logging.info(headers)
-            try:
-                headers = self.get_header(time_stamp,self.verify)
-                logging.info("请求的heders: ")
-                logging.info(headers)
-                res=requests.post(url=allurl,headers=headers,data=self.body)
-            except UnicodeEncodeError:
-                print("--------------------------------------")
-                print(self.body)
-                print(type(self.body))
-                """
-                    这个地方有个坑，对于中文参数，需要转码才能发送；
-                    并且计算签名要在转码之前计算
-                """
-                headers = self.get_header(time_stamp,self.verify)
-                self.body = self.body.encode("utf-8").decode("latin1")
-                logging.info("请求的heders: ")
-                logging.info(headers)
-                print("++++++++++++++++++++")
-                print(self.body)
-                print(type(self.body))
-                res=requests.post(url=allurl,headers=headers,data=self.body,verify=False)
 
-            logging.info("这个地方要开始去进行校验结果了")
-            # print(res.status_code)
-            # print(res.text)
-            logging.info("需要校验的内容")
-            logging.info(self.check)
-            logging.info("实际的返回")
-            logging.info(res.text)
-            flag,fail_reason=check_value(res,self.check)
-            if flag:
-                #检验通过才能去提要需要的内容
-                #提取要提取的内容
-                save_value(res,self.get_value)
-            if res.text:
-                real_txt=res.text
+            try:
+                try:
+                    headers = self.get_header(time_stamp,self.verify)
+                    logging.info("请求的heders: ")
+                    logging.info(headers)
+                    res=requests.post(url=allurl,headers=headers,data=self.body)
+                except UnicodeEncodeError:
+                    print("--------------------------------------")
+                    print(self.body)
+                    print(type(self.body))
+                    """
+                        这个地方有个坑，对于中文参数，需要转码才能发送；
+                        并且计算签名要在转码之前计算
+                    """
+                    headers = self.get_header(time_stamp,self.verify)
+                    self.body = self.body.encode("utf-8").decode("latin1")
+                    logging.info("请求的heders: ")
+                    logging.info(headers)
+                    print("++++++++++++++++++++")
+                    print(self.body)
+                    print(type(self.body))
+                    res=requests.post(url=allurl,headers=headers,data=self.body,verify=False)
+            except Exception as e:
+                logging.error("发送请求错误，错误类型是：")
+                logging.error(e.__class__.__name__)
+                logging.error("发送请求错误，错误明细：")
+                logging.error(e)
+                # real_txt, flag, fail_reason
+                real_txt = '请求异常'
+                flag = False
+                fail_reason = '请求异常'
+                return real_txt, flag, fail_reason
+
             else:
-                real_txt=''
-            if fail_reason:
-                fail_reason=fail_reason
-            else:
-                fail_reason=""
-            return real_txt,flag,fail_reason
+                logging.info("这个地方要开始去进行校验结果了")
+                # print(res.status_code)
+                # print(res.text)
+                logging.info("需要校验的内容")
+                logging.info(self.check)
+                # logging.info("实际的返回")
+                # logging.info(res.text)
+                flag,fail_reason=check_value(res,self.check)
+                if flag:
+                    logging.info("实际的返回")
+                    logging.info(res.text)
+                    #检验通过才能去提要需要的内容
+                    #提取要提取的内容
+                    save_value(res,self.get_value)
+                if res.text:
+                    real_txt=res.text
+                else:
+                    real_txt=''
+                if fail_reason:
+                    fail_reason=fail_reason
+                else:
+                    fail_reason=""
+                return real_txt,flag,fail_reason
 
 
         elif self.method.upper()=="GET":
@@ -333,10 +384,20 @@ class Run_Url():
         #先检查是否是登录接口，登录接口需要
         pass
     def get_sign(self,timestamp,verify):
+        logging.info("开始计算签名")
+
         #verify用来标志是使用md5加密还是sha256加密
         if "md5" in str(verify).lower():
             Sign=md5(self.url,self.body,str(timestamp))
         elif "sha256" in str(verify).lower():
+            #logging.info()
+            # logging.info("url: ")
+            # logging.info(self.url)
+            # logging.info("body: ")
+            # logging.info(self.body)
+            # logging.info("time")
+            # logging.info(timestamp)
+            logging.info("创建sha256加密类")
             Sign=sha256(self.url,self.body,str(timestamp))
         else:
             #默认使用sha256

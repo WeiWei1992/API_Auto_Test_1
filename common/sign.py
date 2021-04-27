@@ -31,9 +31,11 @@ class sha256():
             self.body=self.body.replace("\r","")
             self.body=self.body.replace("\n","")
 
-        #mystr=self.url+self.body+self.appid+self.appkey+self.tiimestamp
-        mystr =self.body + self.appid + self.appkey + self.tiimestamp
-        print(mystr)
+        #sha256需要加上url,md5不需要加上url
+        mystr=self.url+self.body+self.appid+self.appkey+self.tiimestamp
+        #mystr =self.body + self.appid + self.appkey + self.tiimestamp
+        logging.info("要加密的数据")
+        logging.info(mystr)
         sha256 = hashlib.sha256()
 
         #mystr = '/emuplus/secuag/account/v1.0/login{"username":"18161982838","password":"123456","captchaToken":"","captchaAnswer":""}MB-UZHSH-00015dfca8714eb26e3a776e58a8273c87521616047412445'

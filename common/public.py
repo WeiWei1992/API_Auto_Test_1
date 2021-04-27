@@ -51,34 +51,45 @@ def befor_cheak_value(check_value):
         return check_value
 
 
-def check_value(res, check_value):
-    check_value=befor_cheak_value(check_value)
-    flag = True
+def check_value(res, check_values):
+    check_values=befor_cheak_value(check_values)
+    # resflag=False
+    # flag = True
+    flag=False
     fail_list = []
+    failreason_code=''
     if res.status_code != 200:
         flag = False
-        failreason = "status_code错误，不是200"
-        logging.error(failreason)
-        fail_list.append(failreason)
+        failreason_code = "status_code错误，不是200"
+        logging.error(failreason_code)
+        fail_list.append(failreason_code)
         logging.error(res.status_code)
-    check_value = check_value.strip()
-    restext = res.text.strip()
-    check_value_list = check_value.split(';')
-    logging.info("-----------check_value_list--------------")
-    logging.info(check_value_list)
-    logging.info(len(check_value_list))
-    logging.info("----------------restext-------------------------")
-    logging.info(restext)
-    for checkvalue in check_value_list:
-        if checkvalue not in restext:
-            flag = False
-            failreason = '结果参数校验失败'
-            logging.error(failreason)
-            fail_list.append(failreason)
-            logging.error("期望参数")
-            logging.error(checkvalue)
-            logging.error("实际结果")
-            logging.error(restext)
+
+    check_values_list=check_values.split('|')
+    for check_value in check_values_list:
+        check_value=str(check_value)
+        check_value = check_value.strip()
+        restext = res.text.strip()
+        check_value_list = check_value.split(';')
+        logging.info("-----------check_value_list--------------")
+        logging.info(check_value_list)
+        logging.info(len(check_value_list))
+        logging.info("----------------restext-------------------------")
+        logging.info(restext)
+        flag_tmp=True
+        for checkvalue in check_value_list:
+            if checkvalue not in restext:
+                flag_tmp = False
+                failreason = '结果参数校验失败'
+                logging.error(failreason)
+                # fail_list.append(failreason)
+                logging.error("期望参数")
+                logging.error(checkvalue)
+                logging.error("实际结果")
+                logging.error(restext)
+        if flag_tmp:
+            flag=True
+
 
     if flag:
         logging.info("校验正确")
@@ -86,14 +97,49 @@ def check_value(res, check_value):
         return flag, fail_list
     else:
         logging.error("校验失败")
+        fail_list.append("结果参数校验失败")
         return flag, fail_list
+
+
 
 def save_value(res,get_value):
     # print("-----")
     # print(get_value)
     logging.info("保存需要保存的配置文件")
     logging.info(get_value)
-    if get_value:
+
+    if get_value and "pattern" in get_value:
+        try:
+            logging.info("使用自定义的正则表达式提取内容")
+            #logging.info("-------------------------")
+            logging.info(res.text)
+            get_value_list=get_value.split('--')
+            logging.info("读入的需要提取的内容是：")
+            logging.info(get_value_list)
+            logging.info(type(get_value_list))
+            tmp_pattern=get_value_list[1]
+            pattern=re.compile(tmp_pattern)
+            logging.info("正则表达式提取的正则是： "+str(pattern))
+            result=pattern.findall(res.text)
+            logging.info("正则提取到的内容是： ")
+            logging.info(result)
+            #print(result)
+            logging.info(type(result))
+            logging.info("转换成字符串形")
+            result = str(result)
+            logging.info("去点前后的[ ] ")
+            result = result[1:]
+            result = result[:-1]
+            logging.info(result)
+            open_ini = Openate_Ini()
+            body_key=get_value_list[2]
+            logging.info("读入的key")
+            logging.info(body_key)
+            open_ini.modify('body', body_key, str(result))
+        except:
+            logging.error("保存配置文件失败，可能是因为接口返回数据没有该数据")
+        #pass
+    elif get_value:
         res=res.text
         logging.info("请求返回的数据")
         logging.info(res)
@@ -141,9 +187,11 @@ def save_value(res,get_value):
 
 
 def handle_body(body,seciton=None):
+    if body==None:
+        return '{}'
     #处理请求参数，如果里面有自定义的配置参数，需要在配置文件中读取
     #logging.info("处理body中还有配置文件情况")
-    if '**' in body:
+    elif '**' in body:
         logging.info("处理body中还有配置文件情况")
         logging.info(body)
         pattern = re.compile(r'"(\*\*.*?\*\*)"')  # 查找

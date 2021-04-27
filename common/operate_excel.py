@@ -111,6 +111,43 @@ Excel_Headers = {
             "real_response7":80,
             "ispass7":81,
             "fail_reason7":82,
+
+            "step8":83 ,
+            "url8":84,
+            "body8":85,
+            "methond8":86,
+            "version8":87,
+            "verify8":88,
+            "check8":89,
+            "get_value8":90,
+            "real_response8":91,
+            "ispass8":92,
+            "fail_reason8":93,
+
+            "step9":94 ,
+            "url9":95,
+            "body9":96,
+            "methond9":97,
+            "version9":98,
+            "verify9":99,
+            "check9":100,
+            "get_value9":101,
+            "real_response9":102,
+            "ispass9":103,
+            "fail_reason9":104,
+
+            "step10": 105,
+            "url10": 106,
+            "body10": 107,
+            "methond10": 108,
+            "version10": 109,
+            "verify10": 110,
+            "check10": 111,
+            "get_value10": 112,
+            "real_response10": 113,
+            "ispass10": 114,
+            "fail_reason10": 115,
+
         }
 class Operate_Excel():
     def __init__(self,casefile):
@@ -217,7 +254,10 @@ def save_result(resultfile,row,data):
                 flag=False
                 ws.cell(row=row, column=i).fill=fill_fail
     if flag:
-        pass
+        #pass
+        ws.cell(row=row, column=3).value = str(flag)
+        ws.cell(row=row, column=3).fill = fill_pass
+
         # ws.cell(row=row,column=3).value=str(flag)
         # ws.cell(row=row,column=3).fill=fill_pass
     else:
@@ -226,7 +266,51 @@ def save_result(resultfile,row,data):
             #columndata.append(cellvalue)
     wb.save(resultfile)
 
+def save_result_norun(resultfile,row,data):
+    #没有运行时的用例保存
+    #content是要保持的数据list
+    #首先获取某行所有的值，然后再后面添加内容
+    wb=load_workbook(resultfile)
+    ws=wb.active
 
+    #红色
+    fill_fail = openpyxl.styles.PatternFill("solid", fgColor="FF0000")
+
+    fill_pass = openpyxl.styles.PatternFill("solid", fgColor="00FF00")
+
+    #columns=ws.max_column #列数
+    columndata=[]
+    data_len=len(data)
+    flag=True
+    for i in range(1,data_len+1):
+        #cellvalue=ws.cell(row=row,column=i).value
+
+        '''
+        if str(v)=="False":
+        ws.cell(row=row_max+1, column=i).fill=fill_fail
+        '''
+        if data[i-1]==None:
+            # print("XXXXXXXXXXXXXXXXXX")
+            # print(data[i-1])
+            tmp=''
+            ws.cell(row=row, column=i).value = tmp
+        else:
+            ws.cell(row=row,column=i).value=str(data[i-1])
+            if str(data[i-1])=="False":
+                flag=False
+                ws.cell(row=row, column=i).fill=fill_fail
+    if flag:
+        pass
+        # ws.cell(row=row, column=3).value = str(flag)
+        # ws.cell(row=row, column=3).fill = fill_pass
+
+        # ws.cell(row=row,column=3).value=str(flag)
+        # ws.cell(row=row,column=3).fill=fill_pass
+    else:
+        ws.cell(row=row, column=3).value = str(flag)
+        ws.cell(row=row, column=3).fill = fill_fail
+            #columndata.append(cellvalue)
+    wb.save(resultfile)
 
 if __name__=="__main__":
     #OpExcel=Operate_Excel()

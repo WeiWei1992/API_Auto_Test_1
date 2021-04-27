@@ -7,9 +7,9 @@ logging.config.fileConfig(CON_LOG)
 logging=logging.getLogger()
 
 import os
-from common.operate_excel import Operate_Excel,save_result
+from common.operate_excel import Operate_Excel,save_result,save_result_norun
 from api.run_main import run_main
-
+import time
 from openpyxl import load_workbook
 
 # import logging
@@ -41,9 +41,10 @@ def auto_run():
             for value in case.values():
                 case_values.append(value)
 
-            save_result(result_file,i,case_values)
+            save_result_norun(result_file,i,case_values)
         else:
             run_main(case,result_file,i)
+            time.sleep(1)
         i=i+1
 
 
