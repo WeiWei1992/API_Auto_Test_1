@@ -1,6 +1,7 @@
 import configparser
 import os
 import shutil
+import logging
 # my_path=os.path.abspath(os.getcwd())
 # inifile=my_path+'/config/config.ini'
 # print(inifile)
@@ -21,41 +22,51 @@ class Openate_Ini():
     def __init__(self):
         self.inipath=father_path+'/config/config.ini'
         self.inipath_new=father_path+'/config/config_new.ini'
-        print("ini的路径---------------------")
-        print(self.inipath)
+        logging.info("ini的路径---------------------")
+        logging.info(self.inipath)
         # self.config=configparser.ConfigParser()
         # #self.config=configparser.RawConfigParser()
         # self.config.read(self.inipath)
         # print("iniPath: "+str(self.inipath))
 
     def read_ini(self,session,key):
-        config = configparser.ConfigParser()
-        # self.config=configparser.RawConfigParser()
-        config.read(self.inipath)
-        print("iniPath: " + str(self.inipath))
-        res=config.get(session,key)
-        return res
+        try:
+            config = configparser.ConfigParser()
+            # self.config=configparser.RawConfigParser()
+            config.read(self.inipath)
+            logging.info("iniPath: " + str(self.inipath))
+            res=config.get(session,key)
+            return res
+        except Exception as e:
+            logging.error("读取ini文件失败，失败信息如下：")
+            logging.error(e)
+            logging.error("返回个空吧")
+            return ''
         #print(res)
     def modify(self,session,key,value):
         # with open()
         #
-        config = configparser.ConfigParser()
-        # self.config=configparser.RawConfigParser()
-        config.read(self.inipath)
-        print("iniPath: " + str(self.inipath))
+        try:
+            config = configparser.ConfigParser()
+            # self.config=configparser.RawConfigParser()
+            config.read(self.inipath)
+            logging.info("iniPath: " + str(self.inipath))
 
-        print("修改保存ini")
-        print(session)
-        print(key)
-        print(value)
-        config.set(session,key,value)
-        config.write(open(self.inipath,"r+"))
+            logging.info("修改保存ini")
+            logging.info(session)
+            logging.info(key)
+            logging.info(value)
+            config.set(session,key,value)
+            config.write(open(self.inipath,"r+"))
+        except Exception as e:
+            logging.error("修改ini文件失败")
+            logging.error("那就什么都不做吧，加个异常处理，防止程序中断")
     def add_section(self,section):
         #添加指定的节点
         config = configparser.ConfigParser()
         #config.add_section(section)
         sections=config.sections()
-        print(sections)
+        logging.info(sections)
         #print(config.items())
         config.write(open(self.inipath, "a"))
 

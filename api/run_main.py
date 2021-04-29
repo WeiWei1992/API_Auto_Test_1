@@ -11,6 +11,8 @@ from common.public import check_value,save_value,handle_body
 from common.operate_excel import save_result
 openate_ini=Openate_Ini()
 
+from api.initialize_family import Initalize_Family
+
 def run_main(case,result_file,row):
 
     logging.info("用例开始之前，先把配置文件中的[body]删除")
@@ -106,6 +108,9 @@ def run_main(case,result_file,row):
                 realtxt,flag,failreason=run_url.run()
                 Flag=flag
             else:
+                #realtxt, flag, failreason=run_url.run()
+                #失败后，要把后面的接口也跑完，为了是删除新建的房间，但是不需要保存返回的内容
+                #这样也会存在问题， 如果该房间已经存在了，新建失败后，就无法提取roomid,删除的时候就找不到roomid
                 realtxt=""
                 flag=""
                 failreason=""
@@ -170,11 +175,7 @@ class Run_Url():
 
         openate_ini.modify('headers','timestamp',str(time_stamp))
 
-        # headers = self.get_header(time_stamp)
-        # logging.info("headers: " + str(headers))
-        # print("---------------headers------------------------")
-        # print(headers)
-        # print(type(headers))
+
         allurl="http://"+openate_ini.read_ini('url','domain')+"/"+self.url
         #print("allurl:  ",allurl)
         logging.info("请求url: "+allurl)
@@ -206,15 +207,7 @@ class Run_Url():
                 fail_reason='请求异常'
                 return real_txt,flag,fail_reason
             else:
-                # print("---------------------")
-                # print(res)
-                # print("---------------------")
-                # print(res.json())
-                # print(type(res.json()))
 
-                # logging.info("接口请求返回的数据是： ")
-                # logging.info(res.json())
-                # self.handle_login(res.json())
                 flag,fail_reason = check_value(res, self.check)
                 if flag:
                     # 检验通过才能去提要需要的内容
@@ -232,6 +225,26 @@ class Run_Url():
                 else:
                     fail_reason=""
                 return real_txt,flag,fail_reason
+        elif "初始化家庭" == self.step:
+            try:
+                #初始化账号家庭
+                logging.info("这个是初始化账号家庭的步骤")
+                # res=self.send_login()
+                logging.info("先处理下body,看里面是否有配置的参数")
+                self.body = handle_body(self.body, 'user')
+                logging.info("处理后body后的body:: ")
+                logging.info(self.body)
+                init_family=Initalize_Family(self.body)
+                real_txt, flag, fail_reason=init_family.run_init_family()
+
+                #return real_txt, flag, fail_reason
+            except Exception as e:
+                logging.error("初始化家庭账号异常")
+                logging.error(e)
+                return '',True,''
+            else:
+                return real_txt, flag, fail_reason
+
 
         elif self.method==None or self.method=='':
             return '','',''

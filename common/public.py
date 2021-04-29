@@ -1,7 +1,7 @@
 import logging
 import re
 from common.operate_ini import Openate_Ini
-
+import random
 from configparser import NoOptionError
 open_ini=Openate_Ini()
 
@@ -184,22 +184,52 @@ def save_value(res,get_value):
     else:
         logging.info("get_value参数空，略过即可")
 
-
+def generate_random_str(body,randomlength=4):
+  logging.info("查看body中是否有随机参数")
+  """
+  生成一个指定长度的随机字符串
+  """
+  # random_str = ''
+  # base_str = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
+  # length = len(base_str) - 1
+  # for i in range(randomlength):
+  #   random_str += base_str[random.randint(0, length)]
+  if "??" in body:
+      logging.info("body中有随机参数")
+      logging.info("body： ")
+      logging.info(body)
+      random_str = ''
+      base_str = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
+      length = len(base_str) - 1
+      for i in range(randomlength):
+          random_str += base_str[random.randint(0, length)]
+      body=body.replace("??",random_str)
+      logging.info("随机参数替换后的body")
+      logging.info(body)
+      return body
+  else:
+      return body
 
 def handle_body(body,seciton=None):
+    body=generate_random_str(body)
     if body==None:
         return '{}'
+    # elif "??" in body:
+    #     logging.info("输入的body: "+str(body))
+    #     logging.info("输入参数中有？？，要将其替换成随机字符串")
+    #     newstr=generate_random_str(body)
+    #     body=body.replace("??",newstr)
+    #     logging.info("添加随机字符串后的body")
+    #     logging.info(body)
+
     #处理请求参数，如果里面有自定义的配置参数，需要在配置文件中读取
     #logging.info("处理body中还有配置文件情况")
     elif '**' in body:
         logging.info("处理body中还有配置文件情况")
         logging.info(body)
         pattern = re.compile(r'"(\*\*.*?\*\*)"')  # 查找
-        print(pattern)
+        #print(pattern)
         result = pattern.findall(body)
-
-
-
         logging.info("提取到的配置文件中body的值")
         logging.info(result)
         i=1
@@ -229,22 +259,6 @@ def handle_body(body,seciton=None):
         logging.info("配置文件替换完后的body")
         logging.info(body)
         return body
-
-
-
-        # value=get_inivalue(result)
-        # value_list=value.split(',')
-        # print("-------")
-        # print(value_list)
-        #
-        # realvalu=value_list[0].replace("'",'')
-        # #替换
-        # body1=body.replace(result,realvalu)
-
-        #print(body1)
-        # logging.info("处理完body中含有配置文件后的数据")
-        # logging.info(body1)
-        # return body1
     else:
         return body
 

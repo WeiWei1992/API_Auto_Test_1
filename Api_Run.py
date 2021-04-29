@@ -19,7 +19,7 @@ from openpyxl import load_workbook
 # logging=logging.getLogger()
 my_path=os.path.abspath(os.getcwd())
 casefile=my_path+'/case/case.xlsx'
-print(casefile)
+logging.info("casefile: "+str(casefile))
 from common.sign import sha256
 
 def auto_run():
